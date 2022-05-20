@@ -1,8 +1,29 @@
-.baseSearch {
-    margin: auto;
-    width: 80%;
-    padding: 7px;
-    min-height: 63% !important;
-    height: 421px;
-    padding-top: 51px;
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* (x, y)  => position */
+    -ms-transform: translate(-50%, -50%); /* IE 9 */
+    -webkit-transform: translate(-50%, -50%); /* Chrome, Safari, Opera */
+}    
+  
+.main-div{
+    padding-top: 11%;
+    text-align: center;
+}
+.nav-block{
+     min-height: 123px;
+    background: #d0d0d0;
+    padding: 25%;
+    max-height: 324px;
+    border-radius: 8%;
+    color: white;
+    font-size: 19px;
+    font-family: monospace;
+    cursor: pointer;
+
+}
+.main-block{
+    height: calc(92vh) !important;
+    background: #f7f7f7ed;
 }

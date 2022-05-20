@@ -4,3 +4,7 @@
 }
 @import "ag-grid-community/dist/styles/ag-grid.css";
 @import "ag-grid-community/dist/styles/ag-theme-alpine.css";
+.base{
+  padding: 9px;
+  box-shadow: 3px 2px 7px 9px #ccc7c7;
+}

@@ -1,0 +1,11 @@
+.baseSearch {
+    margin: auto;
+    width: 80%;
+    padding: 7px;
+    min-height: 63% !important;
+    height: 180px;
+    padding-top: 51px;
+}
+.card{
+    background: #8080804f !important;
+}

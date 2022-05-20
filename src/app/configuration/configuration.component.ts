@@ -8,21 +8,21 @@ import { ColDef } from 'ag-grid-community';
   styleUrls: ['./configuration.component.css']
 })
 export class ConfigurationComponent implements OnInit {
-
+ isSearchClicked=false;
   constructor(private httpClient: HttpClient) { }
   columnDefs: ColDef[] = [
-    { field: 'id' },
-    { field: 'name' },
-    { field: 'country' },
-    { field: 'established' },
-    { field: 'website' },
-    { field: 'logo' },
-    { field: 'head_quaters' }
+    { field: 'id', width: 32,maxWidth:90, filter:true,editable:true },
+    { field: 'name', width: 38,filter:true,editable:true },
+    { field: 'country', width: 38,filter:true,editable:true },
+    { field: 'established', width: 38,filter:true,editable:true },
+    { field: 'website', width: 38,filter:true,editable:true },
+    { field: 'logo', width: 38,maxWidth:200,filter:true,editable:true },
+    { field: 'head_quaters', width: 38,filter:true,editable:true }
   ];
 
   rowData = [];
   ngOnInit() {
-    this.loadData();
+
   }
   loadData() {
     let headers = new HttpHeaders();
@@ -40,11 +40,19 @@ export class ConfigurationComponent implements OnInit {
         data.push(element.airline[0]);
       });
       this.rowData = data;
+      this.isSearchClicked=false;
       console.table(data);
     })
   }
   onGridReady(event) {
     console.log('onGridReady executed');
-    event.columnApi.autoSizeAllColumns();
+    // event.columnApi.autoSizeAllColumns();
+    event.api.sizeColumnsToFit();
+  }
+  navigate() {
+    this.isSearchClicked=true;
+    this.rowData = [];
+    this.loadData();
+
   }
 }

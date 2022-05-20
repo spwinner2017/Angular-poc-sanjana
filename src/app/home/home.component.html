@@ -1,56 +1,15 @@
-<div class="card">
-  <div class="card-body  baseSearch">
-    <form>
-      <div class="row">
-        <div class="form-group col-6-12">
-          <label for="inputEmail3" class="col-sm-2 col-form-label">Airline Name</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputEmail3" placeholder="Name" [(ngModel)]="airlineName" [ngModelOptions]="{standalone: true}">
-          </div>
-        </div>
-        <div class="form-group col-6-12">
-          <label for="inputPassword3" class="col-sm-2 col-form-label">Airline Type</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputPassword3" placeholder="Airline Type">
-          </div>
-        </div>
+<div class="base main-block">
+  <div class="main-div">
+    <div class="row">
+      <div class="col" style="padding-left:12px;">
+        <div class="nav-block" (click)="navigate()" style="background: #D62828;">Private Alineline</div>
       </div>
-      <fieldset class="form-group">
-        <div class="row pt-3">
-          <legend class="col-form-label col-sm-2 pt-0">Class</legend>
-          <div class="col-sm-10">
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Permenent" checked>
-              <label class="form-check-label" for="gridRadios1">
-                Economy
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Contract Basis">
-              <label class="form-check-label" for="gridRadios2">
-                Business
-              </label>
-            </div>
-
-          </div>
-        </div>
-      </fieldset>
-      <div class="form-group row">
-        <div class="col-sm-2">Private Jet</div>
-        <div class="col-sm-10">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck1">
-            <label class="form-check-label" for="gridCheck1">
-              Yes
-            </label>
-          </div>
-        </div>
+      <div class="col">
+        <div class="nav-block" (click)="navigate()" style="background: #14213D;">Public Alineline</div>
       </div>
-      <div class="form-group row">
-        <div class="col-sm-10">
-          <button type="button" class="btn btn-primary" (click)="navigate()" [disabled]="!airlineName">Search</button>
-        </div>
+      <div class="col" style="padding-right:12px;">
+        <div class="nav-block"  (click)="navigate()" style="background: #FCA311;">Hybrid Alineline</div>
       </div>
-    </form>
+    </div>
   </div>
 </div>
